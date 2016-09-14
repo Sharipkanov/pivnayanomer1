@@ -3,5 +3,7 @@
   "version": "0.0.1",
   "description": "Gulp first application",
   "author": "Yuriy Bogatyrenko",
-  "dependencies": {}
+  "dependencies": {
+    "uikit": "^2.27.1"
+  }
 }

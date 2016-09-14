@@ -1,20 +1,133 @@
-<!DOCTYPE html>
-<html>
-  <head>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Title goes here...</title>
-    <!-- Stylesheets-->
-    <link href="css/style.css" rel="stylesheet">
-  </head>
-  <body>
-    <!-- Header-->
-    <header></header>
-    <!-- Header end-->
-    <!-- Content-->
-    <h1>Hello World!</h1>
-    <!-- Content end-->
-    <!-- Footer-->
-    <footer></footer>
-    <!-- Footer end-->
-    <!-- Scripts-->
-  </body>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="bower_components/uikit/css/uikit.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="site-container">
+        <div class="uk-container uk-container-center">
+            <div class="wrapper">
+                <!-- Header block -->
+                <header class="b-header">
+    <div class="uk-grid uk-grid-large" data-uk-grid-margin>
+        <div class="b-header__logo uk-width-small-1-1 uk-width-medium-1-3">
+            <a href="#"><img src="images/logo.png" alt="" class="b-header__logo_iteself"></a>
+        </div>
+        <div class="uk-width-small-1-1 uk-width-medium-2-3">
+            <section class="b-header__info uk-clearfix">
+                <p class="b-header__info_text -text-large uk-float-left uk-clearfix">
+                    <img src="images/icons/icon-phone.png" alt="" class="uk-float-left">
+                    <span>+7 (3462) 94-10-10</span>
+                </p>
+                <a href="#" class="uk-float-right"><img src="images/icons/icon-instagram.png" alt=""></a>
+            </section>
+            <nav class="b-nav uk-navbar">
+                <ul class="uk-navbar-nav">
+                    <li class="uk-active"><a href="#">О нас</a></li>
+                    <li><a href="#">Фото</a></li>
+                    <li><a href="#">Новости</a></li>
+                    <li><a href="#">Меню</a></li>
+                    <li><a href="#">Доставка</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </nav>
+            <section class="b-header__info">
+                <p class="b-header__info_text uk-clearfix">
+                    <img src="images/icons/icon-plask.png" alt="" class="uk-float-left">
+                    <span>г. Сургут, ТРЦ «Вершина», улица Генерала Иванова, 1, 1-й этаж <br> часы работы: ВС-ЧТ:12 00-02 00, ПТ-СБ:12 00-04 00.</span>
+                </p>
+            </section>
+        </div>
+    </div>
+</header>
+                <!-- Header block end -->
+
+                <div class="uk-grid uk-grid-large" data-uk-grid-margin>
+                    <div class="uk-width-medium-1-3 uk-text-center uk-hidden-small">
+                        <!-- Sidebar block -->
+                        <article class="b-widget__recommend uk-article">
+    <div class="widget-meta-title-wrap">
+        <p class="widget-meta-title">РЕКОМЕНДУЕМ</p>
+    </div>
+    <p class="uk-article-lead">
+        Фахитос с пшеничными лепешками (подается в чугунной сковородке с соусом "Гуакамоле","Сальса" и сметаной Из курицы или говядины 250/30/90 гр.
+    </p>
+    <div class="b-widget__recommend_img_wrap uk-text-center">
+        <div class="img-before"></div>
+        <img src="images/article-recommend-img.jpg" alt="">
+    </div>
+    <div class="uk-text-center"><a href="#"><img src="images/btn-more.png" alt=""></a></div>
+</article>
+<div class="_boxed">
+    <a href="#"><img src="images/btn-actions.png" alt=""></a>
+</div>
+                        <!-- Sidebar block end -->
+                    </div>
+
+                    <div class="uk-width small-1-1 uk-width-medium-2-3">
+                        <!-- Block content -->
+                        
+    <div class="b-page__info">
+        <h2 class="b-page__info_title">Пивная №1</h2>
+        <img src="images/index-page-img.jpg" alt=""class="-img-responsive">
+    </div>
+    <div class="b-widget__news uk-grid uk-grid-collapse uk-grid-match uk-grid-width-small-1-1 uk-grid-width-medium-1-2">
+        <div>
+            <article class="uk-article">
+                <div class="uk-clearfix">
+                    <img src="images/article-img.jpeg" alt="" class="article-thumb">
+                    <div class="uk-float-right article-content">
+                        <p class="uk-article-meta">10.08.2016</p>
+                        <p class="uk-article-lead">Живая музыка в Пивной №1!</p>
+                    </div>
+                </div>
+                <div><a href="#" class="b-widget_news_btn">подробно</a></div>
+            </article>
+        </div>
+        <div>
+            <article class="uk-article">
+                <div class="uk-clearfix">
+                    <img src="images/article-img2.jpg" alt="" class="article-thumb">
+                    <div class="uk-float-right article-content">
+                        <p class="uk-article-meta">10.08.2016</p>
+                        <p class="uk-article-lead">Живая музыка в Пивной №1!</p>
+                    </div>
+                </div>
+                <div class="uk-clearfix"><a href="#" class="b-widget_news_btn">подробно</a></div>
+            </article>
+        </div>
+    </div>
+    <article class="uk-article">
+        <h3 class="uk-article-title">Вы находитесь на официальном сайте ресторана-пивоварни «Пивная №1» города Сургут.</h3>
+        <p class="uk-article-lead">Пивная №1 – особенная. Это одновременно ресторан и пивоварня. Здесь любимый напиток  варят прямо на ваших глазах. Чаны располагаются  за стеклянной стеной холла, видны каждому вошедшему в ресторан и позволяют наблюдать весь процесс  пивоварения. В ресторане подают четыре сорта пива собственного производства на любой вкус и время года. Великолепный вкус напитка обеспечен использованием только высококачественного импортного сырья. Приходите! Попробуйте и убедитесь в абсолютной исключительности нашего пива!</p>
+        <p class="uk-article-meta">Команда «Пивной №1»</p>
+    </article>
+
+                        <!-- Block content end -->
+                    </div>
+                </div>
+
+                <!-- Footer block -->
+                <footer class="b-footer">
+    <div class="b-footer__info">
+        <p class="b-footer__info uk-text-left">&copy; 2012 Ресторан-пивоварня «Пивная №1»</p>
+    </div>
+</footer>
+
+                <!-- Footer block end -->
+            </div>
+        </div>
+    </div>
+    <!-- Scripts -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/uikit/js/uikit.min.js"></script>
+</body>
 </html>

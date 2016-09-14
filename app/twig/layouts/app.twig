@@ -11,18 +11,33 @@
     {% include "stylesheets.twig" %}
 </head>
 <body>
-    <!-- Header block -->
-    {% include "header.twig" %}
-    <!-- Header block end -->
+    <div class="site-container">
+        <div class="uk-container uk-container-center">
+            <div class="wrapper">
+                <!-- Header block -->
+                {% include "header.twig" %}
+                <!-- Header block end -->
 
-    <!-- Block content -->
-    {% block content %}{% endblock %}
-    <!-- Block content end -->
+                <div class="uk-grid uk-grid-large" data-uk-grid-margin>
+                    <div class="uk-width-medium-1-3 uk-text-center uk-hidden-small">
+                        <!-- Sidebar block -->
+                        {% include "sidebar.twig" %}
+                        <!-- Sidebar block end -->
+                    </div>
 
-    <!-- Footer block -->
-    {% include "footer.twig" %}
-    <!-- Footer block end -->
+                    <div class="uk-width small-1-1 uk-width-medium-2-3">
+                        <!-- Block content -->
+                        {% block content %}{% endblock %}
+                        <!-- Block content end -->
+                    </div>
+                </div>
 
+                <!-- Footer block -->
+                {% include "footer.twig" %}
+                <!-- Footer block end -->
+            </div>
+        </div>
+    </div>
     <!-- Scripts -->
     {% include "scripts.twig" %}
 </body>
