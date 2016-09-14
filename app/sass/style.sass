@@ -24,6 +24,35 @@ $lightColor: #CFCAB3
   .uk-article-meta
     text-align: right
 
+.uk-offcanvas-bar
+  background: #533932
+
+  .uk-nav
+    li
+      a
+        color: $lightColor
+        line-height: 30px
+        height: auto
+        transition: all .2s ease-in-out
+        border-bottom: 1px solid #67483f
+        text-transform: uppercase
+
+      &.uk-active
+        a
+          background: $shitColor
+          color: #fff
+
+      &:hover
+        a
+          background: $shitColor
+          color: #fff
+
+.uk-sticky-placeholder
+  display: none
+
+  @media only screen and (max-width : 906px)
+    display: block
+
 *
   -webkit-box-sizing: border-box
   -moz-box-sizing: border-box
@@ -49,6 +78,19 @@ body
   background: url(../images/wrapper-bg.jpg) 0 -8px no-repeat
   margin: 0 -20px
   padding: 0 20px
+
+.b-topbar
+  background: $shitColor
+  display: none
+
+  @media only screen and (max-width : 906px)
+    display: block
+
+  .uk-navbar-toggle
+    color: $lightColor
+
+  .uk-navbar-brand
+    color: $lightColor
 
 .b-header
   padding: 22px 0 22px 20px
