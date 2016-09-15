@@ -10,7 +10,7 @@ $lightColor: #CFCAB3
   padding: 0 20px
 
 .uk-article
-  margin-top: 40px
+  margin-top: 20px
 
   .uk-article-title
     font-size: 17px
@@ -23,6 +23,7 @@ $lightColor: #CFCAB3
 
   .uk-article-meta
     text-align: right
+
 
 .uk-offcanvas-bar
   background: #533932
@@ -47,11 +48,191 @@ $lightColor: #CFCAB3
           background: $shitColor
           color: #fff
 
+
 .uk-sticky-placeholder
   display: none
 
   @media only screen and (max-width : 906px)
     display: block
+
+
+.uk-button-primary
+  background: $shitColor
+  transition: all .2s ease-in-out
+  color: #fff
+  font-size: 12px
+  height: auto
+  min-height: 24px
+  line-height: 24px
+  padding: 0 5px
+  text-transform: lowercase
+  position: relative
+  margin-left: 6px
+
+  &::before
+    position: absolute
+    content: ''
+    top: 0
+    left: -6px
+    width: 0
+    height: 0
+    border-style: solid
+    border-width: 12px 6px 12px 0
+    border-color: transparent $shitColor transparent transparent
+    transition: all .2s ease-in-out
+
+  &::after
+    position: absolute
+    content: ''
+    top: 0
+    right: -6px
+    width: 0
+    height: 0
+    border-style: solid
+    border-width: 12px 0 12px 6px
+    border-color: transparent transparent transparent $shitColor
+    transition: all .2s ease-in-out
+
+  &.reverse-triange
+    padding: 0 11px
+
+    &::before
+      position: absolute
+      content: ''
+      top: 0
+      left: 0
+      width: 0
+      height: 0
+      border-style: solid
+      border-width: 12px 0 12px 6px
+      border-color: transparent transparent transparent #eae8da
+      transition: all .2s ease-in-out
+
+    &::after
+      position: absolute
+      content: ''
+      top: 0
+      right: 0
+      width: 0
+      height: 0
+      border-style: solid
+      border-width: 12px 6px 12px 0
+      border-color: transparent #eae8da transparent transparent
+      transition: all .2s ease-in-out
+
+    &:hover
+      background: $darkColor
+
+      &::before
+        border-color: transparent transparent transparent #eae8da
+
+      &::after
+        border-color: transparent #eae8da transparent transparent
+
+  &:hover
+    background: $darkColor
+
+    &::before
+      border-color: transparent $darkColor transparent transparent
+
+    &::after
+      border-color: transparent transparent transparent $darkColor
+
+
+.uk-form
+  input[type=text],
+  input[type=password],
+  input[type=email],
+  input[type=url],
+  input[type=search],
+  input[type=tel],
+  input[type=number],
+  input[type=datetime],
+  input[type=datetime-local],
+  input[type=date],
+  input[type=month],
+  input[type=time],
+  input[type=week],
+  input[type=color],
+  select,
+  textarea
+    display: block
+    width: 100%
+    background: transparent
+    border: 1px solid $darkColor
+    outline: none
+
+    &:focus
+      background: transparent
+      border: 1px solid $darkColor
+
+  label
+    display: block
+    font-size: 14px
+
+  textarea
+    min-height: 150px
+
+  input[type=submit],
+  button[type=submit]
+
+    &.uk-button-primary
+      @extend .uk-button-primary
+
+
+.uk-modal-dialog-lightbox
+  padding: 60px
+  background: url(../images/main-bg.png) 50% 0 repeat-y
+
+  img
+    border: 10px solid #fff
+    -webkit-box-shadow: 0 0 5px #aaa
+    -moz-box-shadow: 0 0 5px #aaa
+    box-shadow: 0 0 5px #aaa
+
+  > .uk-close:first-child
+    top: 12px
+    right: 12px
+    width: 34px
+    height: 34px
+    border-radius: 50%
+    padding: 0
+    overflow: hidden
+    background: transparent
+
+    &::after
+      display: block
+      width: 34px
+      height: 34px
+      content: ''
+      background: url("../images/close-btn.png") no-repeat center
+
+  .uk-slidenav
+    margin-top: 7.5px
+    width: 17px
+
+  .uk-slidenav-previous
+    &::before
+      width: 17px
+      height: 36px
+      content: ''
+      background: url("../images/btn-prev.png") no-repeat center
+      display: block
+
+  .uk-slidenav-next
+    &::before
+      width: 17px
+      height: 36px
+      content: ''
+      background: url("../images/btn-next.png") no-repeat center
+      display: block
+
+  .uk-modal-caption
+    background: url(../images/main-bg.png) 50% 0 repeat-y
+    bottom: -30px
+    padding: 10px 15px 30px 15px
+    color: $darkColor
+    font-size: 16px
 
 *
   -webkit-box-sizing: border-box
@@ -60,6 +241,17 @@ $lightColor: #CFCAB3
   
 body
   background: fixed #2F1D19 url(../images/body-bg.jpg) no-repeat 50% 0
+
+a
+  text-decoration: none
+  color: $darkColor
+  font-weight: 600
+  font-size: 16px
+  transition: all .2s ease-in-out
+
+  &:hover
+    color: $shitColor
+    text-decoration: none
 
 ._boxed
   padding: 30px 0
@@ -71,6 +263,12 @@ body
 .-img-responsive
   max-width: 100%
 
+.-transition
+  transition: all .2s ease-in-out
+
+.-margin-top-40
+  margin-top: 40px
+
 .site-container
   background: url(../images/main-bg.png) 50% 0 repeat-y
 
@@ -79,6 +277,7 @@ body
   margin: 0 -20px
   padding: 0 20px
 
+// BLOCK TOPBAR
 .b-topbar
   background: $shitColor
   display: none
@@ -92,6 +291,8 @@ body
   .uk-navbar-brand
     color: $lightColor
 
+
+// BLOCK HEADER
 .b-header
   padding: 22px 0 22px 20px
   margin-right: -20px
@@ -115,6 +316,8 @@ body
       > span
         margin: 3px 0 0 10px
 
+
+// BLOCK NAVIGATION
 .b-nav
   margin: 0 -10px 30px 0
   background: transparent
@@ -191,6 +394,8 @@ body
             &::before
               display: none
 
+
+// BLOCK WIDGET RECOMMEND
 .b-widget__recommend
   background: url(../images/recommend-widget-bg.jpg)
   max-width: 255px
@@ -274,6 +479,8 @@ body
       display: block
       background: url(../images/img-before.png) no-repeat 0 0
 
+
+// BLOCK PAGE INFO
 .b-page__info
   position: relative
 
@@ -285,7 +492,136 @@ body
     font-weight: 600
     text-transform: uppercase
 
+    @media only screen and (max-width : 660px)
+      position: relative
+      top: 0
+      left: 0
 
+
+.page-list
+  font-size: 0
+  position: relative
+  padding: 30px 0 25px 0
+
+  &::after
+    height: 16px
+    content: ''
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    background: url(../images/news-bottom-line.png) repeat-x 0 100%
+
+  &::before
+    height: 16px
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    background: url(../images/news-top-line.png) repeat-x 0 100%
+
+  li
+    display: inline-block
+    margin-right: 10px
+    font-size: 16px
+
+    &::after
+      content: '\2666'
+      display: inline-block
+      margin-left: 10px
+
+    a
+      font-size: 16px
+      text-decoration: none
+      transition: all .2s ease-in-out
+      color: $darkColor
+
+      &:hover
+        color: $shitColor
+
+    &.uk-active
+      a
+        color: $shitColor
+
+    &:last-child
+      &::after
+        display: none
+
+  &.normal-content
+    li
+      a
+        font-weight: 400
+        font-size: 14px
+
+.page-italic-title
+  font-size: 30px
+
+.gallery-grid
+
+  img
+    border: 5px solid #fff
+    -webkit-box-shadow: 0 0 3px #aaa
+    -moz-box-shadow: 0 0 3px #aaa
+    box-shadow: 0 0 3px #aaa
+
+.menu-article
+  .uk-article-title
+    font-size: 20px
+    color: #B27B43
+    letter-spacing: 1px
+
+  li
+    display: flex
+    margin-bottom: 15px
+
+    span
+      flex: 0 1 auto
+
+      &.has-dots
+        flex: 1
+        position: relative
+
+        i
+          position: absolute
+          width: 96%
+          border-bottom: 1px solid #C0BA9D
+          bottom: 5px
+          left: 2%
+
+      &.price
+        font-size: 18px
+        color: #B68451
+
+      img
+        margin-right: 5px
+
+.responses-article
+  margin-top: 2px!important
+  padding: 20px 0
+  border-bottom: 1px solid #C0BA9D
+
+  &+.responses-article
+    border-top: 1px solid #C0BA9D
+
+  &:last-child
+    border-bottom: 0
+
+  small
+    color: $shitColor
+    font-size: 12px
+
+  .uk-article-meta
+    text-align: left
+    font-size: 14px
+    color: $darkColor
+    margin: 0 0 10px
+
+  .uk-article-lead
+    margin: 5px 0 15px 0
+
+
+// BLOCK WIDGET NEWS
 .b-widget__news
   .uk-article
     position: relative
@@ -331,51 +667,8 @@ body
       .article-content
         width: 65%
 
-      .b-widget_news_btn
-        background: $shitColor
-        color: #fff
-        font-size: 12px
-        float: right
-        line-height: 16px
-        text-transform: lowercase
-        padding: 0 5px
-        position: relative
-        text-decoration: none
-        transition: all .3s ease-in-out
-        margin: 5px 0 0 0
 
-        &::before
-          position: absolute
-          content: ''
-          top: 0
-          left: -5px
-          width: 0
-          height: 0
-          border-style: solid
-          border-width: 8px 5px 8px 0
-          border-color: transparent $shitColor transparent transparent
-          transition: all .3s ease-in-out
-
-        &::after
-          position: absolute
-          content: ''
-          top: 0
-          right: -5px
-          width: 0
-          height: 0
-          border-style: solid
-          border-width: 8px 0 8px 5px
-          border-color: transparent transparent transparent $shitColor
-          transition: all .3s ease-in-out
-
-        &:hover
-          background: $darkColor
-
-          &::before
-            border-color: transparent $darkColor transparent transparent
-          &::after
-            border-color: transparent transparent transparent $darkColor
-
+// BLOCK FOOTER
 .b-footer
   background: $darkColor
   background-size: 100% 100%

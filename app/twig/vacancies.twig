@@ -1,0 +1,55 @@
+{% extends "layouts/app.twig" %}
+
+{% block content %}
+    <div class="b-page__info">
+        <h2 class="b-page__info_title">О нас</h2>
+        <img src="images/about-page-img.jpg" alt=""class="-img-responsive">
+    </div>
+
+    <ul class="uk-list page-list">
+        <li><a href="about.html">О пивной</a></li>
+        <li><a href="responses.html">Отзывы</a></li>
+        <li class="uk-active"><a href="vacancies.html">Вакансии</a></li>
+    </ul>
+
+    <h4 class="page-italic-title"><i>Вакансии</i></h4>
+
+    <article class="uk-article -margin-top-40">
+        <h3 class="uk-article-title">«Пивной №1» требуются сотрудники!</h3>
+        <p class="uk-article-lead">
+            Дорогие друзья! <br>
+            «Пивная №1» - молодое, активно развивающееся предприятие общественного питания. <br>
+            Если у Вас есть опыт, навыки или просто желание работать в самом передовом ресторане Сургута, добро пожаловать в наш коллектив!
+            <br>
+            Для рассмотрения Вашей вакансии, заполните специальную форму:
+        </p>
+    </article>
+
+    <form action="" class="uk-form -margin-top-40">
+        <div class="uk-form-row">
+            <label>Ваше имя*</label>
+            <input type="text" placeholder="" required>
+        </div>
+        <div class="uk-form-row">
+            <label>Телефон*</label>
+            <input type="text" placeholder="" required>
+        </div>
+        <div class="uk-form-row">
+            <label>Возраст*</label>
+            <input type="text" placeholder="" required>
+        </div>
+        <div class="uk-form-row">
+            <label>Сообщение*</label>
+            <textarea></textarea>
+        </div>
+        <div class="uk-form-row">
+            <label>Резюме</label>
+            <input type="file" name="" id="">
+        </div>
+        <p>Поля, обязательные для заполнения, помечены*.</p>
+        <div class="uk-form-row">
+            <button type="submit" class="uk-button uk-button-primary">отправить</button>
+        </div>
+    </form>
+
+{% endblock %}
