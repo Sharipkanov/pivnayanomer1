@@ -35,11 +35,24 @@ var sources = {
         watch: 'app/sass/**/*.sass',
         dist: 'app/sass'
     },
+    img: {dist: 'app/images'},
     bower: {src: 'app/bower_components'}
 };
 
 /* DEVELOPMENT GULP TASKS ------------------------------------------------------
  ---------------------------------------------------------------------------- */
+
+/* PRETIFY HTML ------------------------------------------------------------- */
+/*gulp.task('indent', function() {
+    gulp.src(sources.html.src)
+        .pipe(indent({
+            tabs:true,
+            amount:1
+        }))
+        .pipe(gulp.dest(sources.html.dist));
+});*/
+
+
 
 /* PUG ---------------------------------------------------------------------- */
 gulp.task('pug', function () {
@@ -74,6 +87,7 @@ gulp.task('compass', function () {
       .pipe(compass({
           sass: sources.sass.dist,
           css: sources.css.dist,
+          image: sources.img.dist,
           js: sources.js.dist
       }))
       .pipe(gulp.dest(sources.css.dist))

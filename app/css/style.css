@@ -1,4 +1,53 @@
 @charset "UTF-8";
+.fri {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.fri-instagram {
+  background-image: url('../images/icons-se2c9dc7f6c.png');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 32px;
+  width: 32px;
+}
+
+.fri-phone {
+  background-image: url('../images/icons-se2c9dc7f6c.png');
+  background-position: 0 -37px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 31px;
+  width: 49px;
+}
+
+.fri-plask {
+  background-image: url('../images/icons-se2c9dc7f6c.png');
+  background-position: 0 -94px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 12px;
+  width: 22px;
+}
+
+.fri-photo {
+  background-image: url('../images/icons-se2c9dc7f6c.png');
+  background-position: 0 -73px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 16px;
+  width: 21px;
+}
+
 .btn {
   color: #0c83e7;
 }
@@ -195,6 +244,30 @@
   min-height: 150px;
 }
 
+.uk-modal-dialog {
+  background: url(../images/main-bg.png) 50% 0 repeat-y;
+}
+.uk-modal-dialog .uk-form {
+  padding: 60px 20px 30px;
+}
+.uk-modal-dialog > .uk-close:first-child {
+  top: 12px;
+  right: 12px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  padding: 0;
+  overflow: hidden;
+  background: transparent;
+}
+.uk-modal-dialog > .uk-close:first-child::after {
+  display: block;
+  width: 34px;
+  height: 34px;
+  content: "";
+  background: url("../images/close-btn.png") no-repeat center;
+}
+
 .uk-modal-dialog-lightbox {
   padding: 60px;
   background: url(../images/main-bg.png) 50% 0 repeat-y;
@@ -335,11 +408,7 @@ a:hover {
   line-height: 1;
 }
 .b-header .b-header__info_text > span {
-  margin: -3px 0 0 10px;
-  float: left;
-}
-.b-header .b-header__info_text.-text-large > span {
-  margin: 3px 0 0 10px;
+  margin: 0 0 0 10px;
 }
 
 .b-nav {
@@ -470,7 +539,7 @@ a:hover {
   border-color: transparent transparent transparent #a06d3a;
 }
 .b-widget__recommend .widget-meta-title-wrap .widget-meta-title {
-  color: #CFCAB3;
+  color: #f4efd5;
   font-size: 20px;
   line-height: 36px;
   text-transform: uppercase;
@@ -615,9 +684,6 @@ a:hover {
 .menu-article li span.price {
   font-size: 18px;
   color: #B68451;
-}
-.menu-article li span img {
-  margin-right: 5px;
 }
 
 .responses-article {

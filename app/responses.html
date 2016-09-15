@@ -30,10 +30,10 @@
         <div class="uk-width-small-1-1 uk-width-medium-2-3">
             <section class="b-header__info uk-clearfix">
                 <p class="b-header__info_text -text-large uk-float-left uk-clearfix">
-                    <img src="images/icons/icon-phone.png" alt="" class="uk-float-left">
+                    <i class="fri fri-phone"></i>
                     <span>+7 (3462) 94-10-10</span>
                 </p>
-                <a href="#" class="uk-float-right"><img src="images/icons/icon-instagram.png" alt=""></a>
+                <a href="#" class="uk-float-right"><i class="fri fri-instagram"></i></a>
             </section>
             <nav class="b-nav uk-navbar">
                 <ul class="uk-navbar-nav">
@@ -47,7 +47,7 @@
             </nav>
             <section class="b-header__info">
                 <p class="b-header__info_text uk-clearfix">
-                    <img src="images/icons/icon-plask.png" alt="" class="uk-float-left">
+                    <i class="fri fri-plask"></i>
                     <span>г. Сургут, ТРЦ «Вершина», улица Генерала Иванова, 1, 1-й этаж <br> часы работы: ВС-ЧТ:12 00-02 00, ПТ-СБ:12 00-04 00.</span>
                 </p>
             </section>
@@ -105,6 +105,10 @@
         <li><a href="vacancies.html">Вакансии</a></li>
     </ul>
 
+    <div class="uk-text-right">
+        <a href="#add-review" class="uk-button uk-button-primary reverse-triange" data-uk-modal>оставить отзыв</a>
+    </div>
+
     <h4 class="page-italic-title"><i>Отзывы</i></h4>
     <article class="responses-article uk-article">
         <p class="uk-article-meta">28.05.2016</p>
@@ -131,6 +135,31 @@
             </p>
         </div>
     </article>
+
+    <div id="add-review" class="uk-modal">
+        <div class="uk-modal-dialog">
+            <a class="uk-modal-close uk-close"></a>
+            <form action="" class="uk-form">
+                <p class="">Мы заинтересованы в безупречном обслуживании наших гостей. <br> И благодарны всем, оставившим свои отзывы о нашем ресторане.</p>
+                <div class="uk-form-row">
+                    <label>Ваше имя*</label>
+                    <input type="text" placeholder="" required>
+                </div>
+                <div class="uk-form-row">
+                    <label>Email*</label>
+                    <input type="email" placeholder="" required>
+                </div>
+                <div class="uk-form-row">
+                    <label>Сообщение*</label>
+                    <textarea></textarea>
+                </div>
+                <p>Поля, обязательные для заполнения, помечены*.</p>
+                <div class="uk-form-row">
+                    <button type="submit" class="uk-button uk-button-primary">отправить</button>
+                </div>
+            </form>
+        </div>
+    </div>
 
                         <!-- Block content end -->
                     </div>

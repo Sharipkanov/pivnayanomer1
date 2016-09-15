@@ -1,3 +1,5 @@
+@import "mixins/mixins"
+@import "icons"
 @import "buttons"
 
 $darkColor: #5f443b
@@ -180,6 +182,29 @@ $lightColor: #CFCAB3
       @extend .uk-button-primary
 
 
+.uk-modal-dialog
+  background: url(../images/main-bg.png) 50% 0 repeat-y
+
+  .uk-form
+    padding: 60px 20px 30px
+
+  > .uk-close:first-child
+    top: 12px
+    right: 12px
+    width: 34px
+    height: 34px
+    border-radius: 50%
+    padding: 0
+    overflow: hidden
+    background: transparent
+
+    &::after
+      display: block
+      width: 34px
+      height: 34px
+      content: ''
+      background: url("../images/close-btn.png") no-repeat center
+
 .uk-modal-dialog-lightbox
   padding: 60px
   background: url(../images/main-bg.png) 50% 0 repeat-y
@@ -309,12 +334,7 @@ a
     line-height: 1
 
     > span
-      margin: -3px 0 0 10px
-      float: left
-
-    &.-text-large
-      > span
-        margin: 3px 0 0 10px
+      margin: 0 0 0 10px
 
 
 // BLOCK NAVIGATION
@@ -444,7 +464,7 @@ a
       border-color: transparent transparent transparent $shitColor
 
     .widget-meta-title
-      color: $lightColor
+      color: #f4efd5
       font-size: 20px
       line-height: 36px
       text-transform: uppercase
@@ -592,9 +612,6 @@ a
       &.price
         font-size: 18px
         color: #B68451
-
-      img
-        margin-right: 5px
 
 .responses-article
   margin-top: 2px!important

@@ -12,6 +12,10 @@
         <li><a href="vacancies.html">Вакансии</a></li>
     </ul>
 
+    <div class="uk-text-right">
+        <a href="#add-review" class="uk-button uk-button-primary reverse-triange" data-uk-modal>оставить отзыв</a>
+    </div>
+
     <h4 class="page-italic-title"><i>Отзывы</i></h4>
     <article class="responses-article uk-article">
         <p class="uk-article-meta">28.05.2016</p>
@@ -38,4 +42,29 @@
             </p>
         </div>
     </article>
+
+    <div id="add-review" class="uk-modal">
+        <div class="uk-modal-dialog">
+            <a class="uk-modal-close uk-close"></a>
+            <form action="" class="uk-form">
+                <p class="">Мы заинтересованы в безупречном обслуживании наших гостей. <br> И благодарны всем, оставившим свои отзывы о нашем ресторане.</p>
+                <div class="uk-form-row">
+                    <label>Ваше имя*</label>
+                    <input type="text" placeholder="" required>
+                </div>
+                <div class="uk-form-row">
+                    <label>Email*</label>
+                    <input type="email" placeholder="" required>
+                </div>
+                <div class="uk-form-row">
+                    <label>Сообщение*</label>
+                    <textarea></textarea>
+                </div>
+                <p>Поля, обязательные для заполнения, помечены*.</p>
+                <div class="uk-form-row">
+                    <button type="submit" class="uk-button uk-button-primary">отправить</button>
+                </div>
+            </form>
+        </div>
+    </div>
 {% endblock %}

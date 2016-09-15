@@ -1,0 +1,37 @@
+=retina-bg($normal, $retina, $contain: false)
+  background-image: image-url($normal)
+  background-repeat: no-repeat
+  background-position: center center
+
+  @if $contain == true and $contain != 'autosize'
+    background-size: contain
+  @else if $contain == 'autosize'
+    background-size: (image-width($retina) / 2) (image-height($retina) / 2)
+    width: image-width($retina) / 2
+    height: image-height($retina) / 2
+    display: inline-block
+  @else
+    background-size: (image-width($retina) / 2) (image-height($retina) / 2)
+
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx)
+    background-image: image-url($retina)
+
+$icons: sprite-map("icons/*.png", $position: 0, $spacing: 5px, $repeat: no-repeat)
+
+=sprite($sprite, $type: "all", $pos: "static")
+
+  @if $type != "retina"
+    background-image: sprite-url($icons)
+    background-position: sprite-position($icons, $sprite)
+    background-repeat: no-repeat
+    overflow: hidden
+    display: inline-block
+    vertical-align: middle
+    height: ceil(image-height(sprite-file($icons, $sprite)))
+    width: ceil(image-width(sprite-file($icons, $sprite)))
+    @if $pos == "abs_middle"
+      position: absolute
+      top: 50%
+      left: 50%
+      margin-top: -(image-height(sprite-file($icons, $sprite))/2)
+      margin-left: -(image-width(sprite-file($icons, $sprite))/2)
